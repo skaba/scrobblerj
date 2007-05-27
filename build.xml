@@ -1,0 +1,45 @@
+<project name="java-scrobbler" default="dist">
+	<property file="build.properties"/>
+	<target name="clean">
+		<delete failonerror="false" includeemptydirs="true">
+			<fileset dir="bin"/>
+			<fileset dir="dist"/>
+			<fileset dir="build"/>
+		</delete>
+	</target>
+	
+	<target name="init" depends="clean">
+		<mkdir dir="build"/>
+		<mkdir dir="bin"/>
+		<mkdir dir="dist"/>
+	</target>
+	
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+	
+	<target name="jar" depends="init,compile">
+		<jar destfile="build/scrobblerj-${version}.jar" basedir="bin"/>
+	</target>
+	
+	<target name="source" depends="clean,init">
+		<mkdir dir="build/source"/>
+		<copy todir="build/source/src">
+			<fileset dir="src"/>
+		</copy>
+		<copy todir="build/source/test">
+			<fileset dir="test"/>
+		</copy>
+		<copy file="build.xml" todir="build/source"/>
+		<copy file="build.properties" todir="build/source"/>
+		<copy file="gpl.txt" todir="build/source"/>
+		<zip destfile="build/scrobblerj-${version}.zip" basedir="build/source"/>
+		<delete dir="build/source"/>
+	</target>
+	
+	<target name="dist" depends="source,jar">
+		<mkdir dir="dist"/>
+		<copy file="build/scrobblerj-${version}.jar" todir="dist"/>
+		<copy file="build/scrobblerj-${version}.zip" todir="dist"/>
+	</target>	
+</project>
