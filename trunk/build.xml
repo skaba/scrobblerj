@@ -2,7 +2,6 @@
 	<property file="build.properties"/>
 	<target name="clean">
 		<delete failonerror="false" includeemptydirs="true">
-			<fileset dir="bin"/>
 			<fileset dir="dist"/>
 			<fileset dir="build"/>
 		</delete>
@@ -10,16 +9,16 @@
 	
 	<target name="init" depends="clean">
 		<mkdir dir="build"/>
-		<mkdir dir="bin"/>
+		<mkdir dir="build/bin"/>
 		<mkdir dir="dist"/>
 	</target>
 	
 	<target name="compile" depends="init">
-		<javac srcdir="src" destdir="bin"/>
+		<javac srcdir="src" destdir="build/bin"/>
 	</target>
 	
 	<target name="jar" depends="init,compile">
-		<jar destfile="build/scrobblerj-${version}.jar" basedir="bin"/>
+		<jar destfile="build/scrobblerj-${version}.jar" basedir="build/bin"/>
 	</target>
 	
 	<target name="source" depends="clean,init">

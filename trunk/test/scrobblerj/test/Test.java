@@ -20,16 +20,12 @@ public class Test {
 		System.out.println(u.getGender());
 		Album a = new Album("Iron Maiden","Dance of Death");
 		System.out.println(a.getReleaseDate());
-		/*
 		User[] friends = u.getFriends();
 		for(int i=0;i<friends.length;i++)
-			//System.out.println("");
 			System.out.println(friends[i].getUsername()+": "+friends[i].getRealname());
-			*/
-		/*Neighbour[] neighbours = u.getNeighbours();
+		Neighbour[] neighbours = u.getNeighbours();
 		for(int i=0;i<neighbours.length;i++)
 			System.out.println(neighbours[i].getUser().getUsername()+" "+neighbours[i].getMatch());
-			*/
 		ImageIO.write(u.getAvatar(),"jpg",new File("test.jpg"));
 		TasteOMeter meter = u.getTasteOMeter(new User("Crims"));
 		System.out.println(meter.getScore());
