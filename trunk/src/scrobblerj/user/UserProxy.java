@@ -1,15 +1,13 @@
 package scrobblerj.user;
+
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
 import java.util.Vector;
-
-
 import javax.imageio.ImageIO;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -18,12 +16,12 @@ import org.w3c.dom.NodeList;
 import scrobblerj.XMLParserProxy;
 
 
-public class UserProxy extends XMLParserProxy implements IUser {
+class UserProxy extends XMLParserProxy implements IUser {
 	
 	private String username;
 	private boolean imageFetched;
 	private RenderedImage image;
-	public UserProxy(String userName) {
+	UserProxy(String userName) {
 		this.username = userName;
 	}
 

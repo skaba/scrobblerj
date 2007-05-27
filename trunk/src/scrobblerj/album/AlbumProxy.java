@@ -4,17 +4,15 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
 
-
-
 import org.w3c.dom.Node;
 
 import scrobblerj.XMLParserProxy;
 
-public class AlbumProxy extends XMLParserProxy implements IAlbum {
+class AlbumProxy extends XMLParserProxy implements IAlbum {
 	
 	private String artist,title;
 	
-	public AlbumProxy(String artist, String title) {
+	AlbumProxy(String artist, String title) {
 		this.artist = artist;
 		this.title = title;
 	}

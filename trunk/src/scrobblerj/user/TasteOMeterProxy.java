@@ -8,8 +8,7 @@ import org.w3c.dom.NodeList;
 import scrobblerj.XMLParserProxy;
 import scrobblerj.artist.Artist;
 
-
-public class TasteOMeterProxy extends XMLParserProxy implements ITasteOMeter {
+class TasteOMeterProxy extends XMLParserProxy implements ITasteOMeter {
 	
 	private IUser userA,userB;
 	
