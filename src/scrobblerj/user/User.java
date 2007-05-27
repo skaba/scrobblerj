@@ -4,7 +4,6 @@ import java.awt.image.RenderedImage;
 import java.net.URL;
 import java.util.Date;
 
-
 public class User implements IUser {
 	private UserProxy proxy;
 	public int getAge() {
