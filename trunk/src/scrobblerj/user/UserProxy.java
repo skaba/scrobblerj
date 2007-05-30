@@ -6,6 +6,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
 import java.util.Vector;
+
 import javax.imageio.ImageIO;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -14,6 +15,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import scrobblerj.XMLParserProxy;
+import scrobblerj.album.Album;
+import scrobblerj.artist.Artist;
+import scrobblerj.tag.TopTagItem;
 
 
 class UserProxy extends XMLParserProxy implements IUser {
@@ -150,4 +154,13 @@ class UserProxy extends XMLParserProxy implements IUser {
 	public TasteOMeter getTasteOMeter(User userB) {
 		return new TasteOMeter(this,userB);
 	}
+
+	public TopTagItem[] getTopTags() {
+		return getTopTagsByURL("http://ws.audioscrobbler.com/1.0/user/"+username+"/tags.xml");
+	}
+
+	public TopTagItem[] getTopTagsForArtist(Artist artist) {
+		return getTopTagsByURL("http://ws.audioscrobbler.com/1.0/user/"+username+"/artisttags.xml?artist="+artist.getName());
+	}
+	
 }

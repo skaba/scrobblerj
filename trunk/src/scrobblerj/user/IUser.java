@@ -4,18 +4,24 @@ import java.awt.image.RenderedImage;
 import java.net.URL;
 import java.util.Date;
 
+import scrobblerj.album.Album;
+import scrobblerj.artist.Artist;
+import scrobblerj.tag.TopTagItem;
 
 public interface IUser {
-	public abstract int getAge();
-	public abstract String getCountry();
-	public abstract Gender getGender();
-	public abstract long getPlayCount();
-	public abstract URL getURL();
-	public abstract String getRealname();
-	public abstract Date getRegisterationDate();
-	public abstract RenderedImage getAvatar();
-	public abstract String getUsername();
-	public abstract User[] getFriends();
-	public abstract Neighbour[] getNeighbours();
-	public abstract TasteOMeter getTasteOMeter(User userB);
+	public int getAge();
+	public String getCountry();
+	public Gender getGender();
+	public long getPlayCount();
+	public URL getURL();
+	public String getRealname();
+	public Date getRegisterationDate();
+	public RenderedImage getAvatar();
+	public String getUsername();
+	public User[] getFriends();
+	public Neighbour[] getNeighbours();
+	public TasteOMeter getTasteOMeter(User userB);
+	public TopTagItem[] getTopTags();
+	public TopTagItem[] getTopTagsForArtist(Artist artist);
+	//public TopTagItem[] getTopTagsForAlbum(Album album);
 }

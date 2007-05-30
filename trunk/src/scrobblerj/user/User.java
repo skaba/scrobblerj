@@ -4,6 +4,9 @@ import java.awt.image.RenderedImage;
 import java.net.URL;
 import java.util.Date;
 
+import scrobblerj.artist.Artist;
+import scrobblerj.tag.TopTagItem;
+
 public class User implements IUser {
 	private UserProxy proxy;
 	public int getAge() {
@@ -52,6 +55,12 @@ public class User implements IUser {
 	}
 	public TasteOMeter getTasteOMeter(User userB) {
 		return proxy.getTasteOMeter(userB);
+	}
+	public TopTagItem[] getTopTags() {
+		return proxy.getTopTags();
+	}
+	public TopTagItem[] getTopTagsForArtist(Artist artist) {
+		return proxy.getTopTagsForArtist(artist);
 	}
 	
 	
