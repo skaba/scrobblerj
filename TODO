@@ -1,0 +1,3 @@
+Implement hopefully all services.
+Implement caching based on 304 (Content not modified) HTTP return code
+	(Inspired from pyscrobbler - http://code.google.com/p/pyscrobbler )
