@@ -32,6 +32,8 @@
 		<copy file="build.xml" todir="build/source"/>
 		<copy file="build.properties" todir="build/source"/>
 		<copy file="gpl.txt" todir="build/source"/>
+		<copy file="AUTHORS" todir="build/source"/>
+		<copy file="TODO" todir="build/source"/>
 		<zip destfile="build/scrobblerj-${version}.zip" basedir="build/source"/>
 		<delete dir="build/source"/>
 	</target>
