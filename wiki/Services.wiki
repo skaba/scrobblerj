@@ -1,6 +1,7 @@
 Services Implemented
 
 *User Profile Data*
+
 || * Service* || *Implemented ||
 || Profile Information || Done ||
 || Top Artists || - ||
@@ -31,21 +32,27 @@ Services Implemented
 || Taste-O-Meter || Done ||
 || Mainstream-O-Meter ^1^ || - ||
 || Taste-O-Meter (weeekly) ^1^ || - ||
+
 *Artist Data*
+
 || Related Artists || - ||
 || Top Fans || - ||
 || Top Tracks || - ||
 || Top Albums || - ||
 || Top Tags || - ||
 || Current Events || - ||
+
 *Album Data*
+
 || Info || Done ||
 *Tag Data*
 || Overall Top Tags || - ||
 || Top Artists || - ||
 || Top Albums || - ||
 || Top Tracks || - ||
+
 *Group Data*
+
 || Recent Journals || - ||
 || Weekly Chart List || - ||
 || Recent Weekly Artist Chart || - ||
@@ -55,7 +62,9 @@ Services Implemented
 || Previous Weekly Album Chart || - ||
 || Previous Weekly Track Chart || - ||
 || Mainstream-O-Meter ^1^ || - ||
+
 *Forum Data*
+
 || Forums || - ||
 
 1: Refer to http://mainstream.vincentahrend.com/ for Mainstream-O-Meter data.
