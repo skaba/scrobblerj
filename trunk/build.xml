@@ -22,20 +22,13 @@
 	</target>
 	
 	<target name="source" depends="clean,init">
-		<mkdir dir="build/source"/>
-		<copy todir="build/source/src">
-			<fileset dir="src"/>
-		</copy>
-		<copy todir="build/source/test">
-			<fileset dir="test"/>
-		</copy>
-		<copy file="build.xml" todir="build/source"/>
-		<copy file="build.properties" todir="build/source"/>
-		<copy file="gpl.txt" todir="build/source"/>
-		<copy file="AUTHORS" todir="build/source"/>
-		<copy file="TODO" todir="build/source"/>
-		<zip destfile="build/scrobblerj-${version}.zip" basedir="build/source"/>
-		<delete dir="build/source"/>
+		<zip destfile="build/scrobblerj-${version}.zip" basedir=".">
+			<exclude name="**/.*"/>
+			<exclude name="**/test.jpg"/>
+			<exclude name="**/dist/**"/>
+			<exclude name="**/build/**"/>
+			<exclude name="**/bin/**"/>
+		</zip>
 	</target>
 	
 	<target name="dist" depends="source,jar">
