@@ -49,6 +49,12 @@ Services Implemented
 || * Service* || *Implemented ||
 || Info || Done ||
 
+*Track Data*
+
+|| * Service* || *Implemented ||
+|| Top Fans || - ||
+|| Top Tags || - ||
+
 *Tag Data*
 
 || * Service* || *Implemented ||
