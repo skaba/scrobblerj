@@ -32,7 +32,7 @@ Services Implemented
 || System Event Recommendations || - ||
 || Taste-O-Meter || Done ||
 || Mainstream-O-Meter ^1^ || - ||
-|| Taste-O-Meter (weeekly) ^1^ || - ||
+|| Mainstream-O-Meter (weeekly) ^1^ || - ||
 
 *Artist Data*
 
